@@ -1,27 +1,37 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { ProductsService } from './products.service';
 import { IProduct } from './models';
-import { API_URL, PRODUCTS, RAMDOM_NUMBER} from './products.module';
+import { API_URL, PRODUCTS, RANDOM_NUMBER } from './products.module';
+import { AlertsService } from '../../../../core/services/alerts.service';
+import { UsersService } from '../users/users.service';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrl: './products.component.scss'
+  styleUrl: './products.component.scss',
 })
-export class ProductsComponent implements OnInit{
+export class ProductsComponent implements OnInit {
   displayedColumns = ['id', 'name', 'price', 'actions'];
 
   // products: IProduct[] = [];
 
-  constructor(private productsService : ProductsService,
-  @Inject(API_URL) private apiUrl: string,
-  @Inject(RAMDOM_NUMBER) private randomNumber: number,
-  @Inject(PRODUCTS) public products: IProduct[],
-) {
-  console.log(this.apiUrl);
-  console.log('random number:', this.randomNumber);
-}
+  constructor(
+    private productsService: ProductsService,
+    @Inject(API_URL) private apiUrl: string,
+    @Inject(RANDOM_NUMBER) private randomNumber: number,
+    @Inject(PRODUCTS) public products: IProduct[],
+    private alertsService: AlertsService,
+    private usersService: UsersService
+  ) {
+    console.log(this.apiUrl);
+    console.log('random number: ', this.randomNumber);
+
+    this.alertsService.notifier$.subscribe({
+      next: (message) => console.log(message),
+    });
+  }
+
   ngOnInit(): void {
-  // this.products = this.productsService.getProducts();
+    // this.products = this.productsService.getProducts();
   }
 }

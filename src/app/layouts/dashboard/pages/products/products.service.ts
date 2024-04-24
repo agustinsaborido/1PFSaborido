@@ -9,8 +9,8 @@ export class ProductsService {
       return[
         {
           id:1,
-          name: 'Pc Gamer',
-          price: 3000,
+          name: 'Pc',
+          price: 1999,
         }
       ]
     }

@@ -2,28 +2,21 @@ import { InjectionToken, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ProductsRoutingModule } from './products-routing.module';
+import { MatTableModule } from '@angular/material/table';
 import { ProductsComponent } from './products.component';
 import { SharedModule } from '../../../../shared/shared.module';
 import { ProductsService } from './products.service';
-
+import { ProductsMockService } from './products-mock.service';
 
 export const API_URL = new InjectionToken('API_URL');
-export const RAMDOM_NUMBER = new InjectionToken('RAMDOM_NUMBER');
+export const RANDOM_NUMBER = new InjectionToken('RANDOM_NUMBER');
 export const PRODUCTS = new InjectionToken('PRODUCTS');
 
 @NgModule({
-  declarations: [
-    ProductsComponent
-  ],
-  imports: [
-    CommonModule,
-    ProductsRoutingModule,
-    SharedModule,
-  ],
-  exports:[
-    ProductsComponent,
-  ],
-  providers:[
+  declarations: [ProductsComponent],
+  imports: [CommonModule, ProductsRoutingModule, MatTableModule, SharedModule],
+  exports: [ProductsComponent],
+  providers: [
     // ProductsService,
     {
       provide: ProductsService,
@@ -31,25 +24,21 @@ export const PRODUCTS = new InjectionToken('PRODUCTS');
     },
     {
       provide: API_URL,
-      useValue:'http://localhost:5001/api',
+      useValue: 'http://localhost:5001/api',
     },
     {
-      provide: RAMDOM_NUMBER,
+      provide: RANDOM_NUMBER,
       useFactory: () => {
         return Math.random();
       },
     },
     {
       provide: PRODUCTS,
-      useFactory: (productsService: ProductsService) =>{
-        return productsService.getProducts();
+      useFactory: (productService: ProductsService) => {
+        return productService.getProducts();
       },
-      deps:[ProductsService],
-    }
+      deps: [ProductsService],
+    },
   ],
 })
-export class ProductsModule {
-
-  // displayedColumns = ['id','name', 'price', 'actions'];
-
- }
+export class ProductsModule {}
