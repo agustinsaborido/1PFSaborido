@@ -21,7 +21,7 @@ export class AuthService {
   constructor(private router: Router) {}
 
   login(data: LoginData): void {
-    if (data.email !== 'saboridoagustin@mail.com' || data.password !== '123456' , data.email !== 'davidrivas@hotmail.com' || data.password !== '123456' ) {
+    if (data.email !== 'saboridoagustin@mail.com' || data.password !== '123456') {
       alert('Correo o password incorrectos');
     } else {
       this._authUser$.next(this.MOCK_AUTH_USER);
