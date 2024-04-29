@@ -3,10 +3,10 @@
     } @else {
     <form [formGroup]="saleForm" action="">
       <mat-form-field>
-        <mat-label>Cursos</mat-label>
+        <mat-label>Clases</mat-label>
         <mat-select formControlName="product">
           <mat-option [value]="product" *ngFor="let product of products"
-            >{{ product.name }} - {{ product.price | currency }}</mat-option
+            >{{ product.name }} - {{ product.turno }}</mat-option
           >
         </mat-select>
       </mat-form-field>

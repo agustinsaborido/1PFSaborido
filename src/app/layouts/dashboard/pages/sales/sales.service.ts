@@ -17,7 +17,7 @@ let SALES_DB: ISale[] = [
     product: {
       id: 1,
       name: 'IPAD',
-      price: 1000,
+      turno: 'Turno Tarde',
     },
     quantity: 2,
   },

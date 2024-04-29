@@ -6,12 +6,12 @@ export class ProductsMockService {
             {
                 id: 2,
                 name: 'Product Mock 1',
-                price: 9999,
+                turno: 'Turno Mañana',
             },
             {
                 id: 2,
                 name: 'Product Mock 2',
-                price: 2000,
+                turno: 'Turno Mañana',
             },
         ];
     }

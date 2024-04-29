@@ -9,28 +9,28 @@ export class ProductsService {
       return[
         {
           id:1,
-          name: 'TV',
-          price: 299999,
+          name: 'Elementos de Psicología y Sociología',
+          turno: '(Turno Mañana)',
         },
         {
           id:2,
-          name: 'PS5',
-          price: 1500000,
+          name: 'Contabilidad y Administración',
+          turno: '(Turno Tarde)',
         },
         {
           id:3,
-          name: 'Parlante',
-          price: 200000,
+          name: 'Derecho Civil',
+          turno: '(Turno Mañana)',
         },
         {
           id:4,
-          name: 'Notebook',
-          price: 1700000,
+          name: 'Arquitectura y Construcción',
+          turno: '(Turno Noche)',
         },
         {
           id:5,
-          name: 'Auriculares',
-          price: 145000,
+          name: 'Tasaciones',
+          turno: '(Turno Tarde)',
         },
         
       ]
