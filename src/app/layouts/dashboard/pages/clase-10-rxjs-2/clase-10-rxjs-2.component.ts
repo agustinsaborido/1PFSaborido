@@ -102,11 +102,6 @@ export class Clase10Rxjs2Component implements OnInit, OnDestroy {
       },
     });
 
-    // forkJoin([of('hola'), of(1), of(true)]).subscribe({
-    //   next: (value) => {
-    //     console.log(value);
-    //   },
-    // });
 
     const obtenerUsuario$ = new Observable<number>((observer) => {
       let counter = 0;
@@ -116,20 +111,14 @@ export class Clase10Rxjs2Component implements OnInit, OnDestroy {
       }, 1000);
     });
 
-    // this.obtenerUsuarioSubscription = obtenerUsuario$
-    //   // .pipe(takeUntil(this.componenteDestruido$))
-    //   .subscribe({
-    //     next: (v) => console.log(v),
-    //   });
-
     this.cambioElUsuario$.subscribe({
       next: (value) => {
         this.usuarioAutenticado$.next({
           id: 1,
           createdAt: new Date(),
-          email: 'email@mail.com',
-          firstName: 'goku',
-          lastName: 'son',
+          email: 'Zapata@mail.com',
+          firstName: 'Luciano',
+          lastName: 'Zapata',
           role: 'ADMIN',
         });
       },
@@ -140,34 +129,7 @@ export class Clase10Rxjs2Component implements OnInit, OnDestroy {
         console.log(value);
       },
     });
-
-    // const obtenerUsuarioSubscription = obtenerUsuario$
-    //   .pipe(
-    //     tap((value) => {
-    //       console.log('TAP 1', value);
-    //     }),
-    //     map((value) => {
-    //       return value * 2;
-    //     }),
-    //     filter((value) => {
-    //       return value > 5;
-    //     }),
-    //     tap((value) => {
-    //       console.log('TAP 2', value);
-    //     })
-    //   )
-    //   .subscribe({
-    //     next: (value) => {
-    //       console.log(value);
-    //     },
-    //     error: () => {},
-    //     // finally
-    //     complete: () => {
-    //       console.log(
-    //         'El observable se completo, por lo tanto no emite mas valores'
-    //       );
-    //     },
-    //   });
+  
   }
 }
 

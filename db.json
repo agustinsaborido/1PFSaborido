@@ -1,0 +1,83 @@
+{
+  "users": [
+    {
+      "firstName": "Juan",
+      "lastName": "Díaz",
+      "email": "Díaz@mail.com",
+      "role": "ADMIN",
+      "createdAt": "2024-02-30T01:14:53.907Z",
+      "id": "69fe"
+    },
+    {
+      "firstName": "Hugo",
+      "lastName": "Solana",
+      "email": "Solana@mail.com",
+      "role": "USER",
+      "createdAt": "2024-04-22",
+      "id": "3aff"
+    },
+    {
+      "firstName": "Isidoro",
+      "lastName": "Castells",
+      "email": "castells@mail.com",
+      "role": "USER",
+      "createdAt": "2024-04-12",
+      "id": "d241"
+    },
+    {
+      "firstName": "Gabriel",
+      "lastName": "Sanchez",
+      "email": "Sanchez@mail.com",
+      "role": "USER",
+      "createdAt": "2024-04-12",
+      "id": "c47b"
+    },
+    {
+      "firstName": "agustin",
+      "lastName": "saborido",
+      "email": "saborido@mail.com",
+      "role": "ADMIN",
+      "createdAt": "2024-04-03T13:51:08.748Z",
+      "id": "49cd"
+    },
+    {
+      "firstName": "Amador",
+      "lastName": "Torre",
+      "email": "torre@mail.com",
+      "role": "ADMIN",
+      "createdAt": "2024-01-03T13:51:08.748Z",
+      "id": "ddd2"
+    }
+  ],
+  "products": [
+    {
+      "id": "abc1234",
+      "name": "Tecnicatura En Gestión Contable E Impositiva",
+      "price": 100000
+    },
+    {
+      "id": "bd82",
+      "name": "Tecnicatura En Dirección De Equipos De Ventas",
+      "price": 90000
+    },
+    {
+      "id": "1ab9",
+      "name": "Tecnicatura Universitaria en Diseño y Desarrollo de Videojuegos",
+      "price": 90000
+    },
+    {
+      "id": "e40e",
+      "name": "Tecnicatura Universitaria En Redes Informáticas Y Telecomunicaciones",
+      "price": 100000
+    },
+    {
+      "id": "0c07",
+      "name": "Tecnicatura En Higiene Y Seguridad Laboral",
+      "price": 85000
+    }
+  ],
+  "sales": [],
+  "roles": []
+}
+
+
